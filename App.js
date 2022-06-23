@@ -7,7 +7,7 @@ import { Text, FlatList, View,Button, Image, StyleSheet, ActivityIndicator, Text
 const CPA02 = () => {
     const [data,setData] = useState([]);
     const [loading,setLoading] = useState(true);
-    const [ingredient, setIngredient] = useState('beef')
+    const [ingredient, setIngredient] = useState('chicken')
 
     const getMeals = async () => {
         try {
@@ -27,7 +27,7 @@ const CPA02 = () => {
       <Item title1={item.strMeal} url={item.strMealThumb} id1={item.idMeal}/>
     );
     return(
-        <View style={{ flex: 1, padding: 24 }}>
+      <View style={styles.item1}>
           <Text style={styles.title}>Meal Finder</Text>
           <TextInput
             placeholder="Enter Ingredient"
@@ -64,6 +64,12 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     marginHorizontal: 16,
     flexDirection: "row-reverse"
+  },
+  item1:{
+    backgroundColor:'yellow',
+    flexDirection:"row"
+
+
   },
   image: {
     width: 66,
